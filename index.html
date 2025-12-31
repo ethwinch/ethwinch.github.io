@@ -1,9 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Webbed Site</title>
+        <title>Ethan Winch</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
+
+    <nav>
+        <img src="" alt="logo"/>
+        <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <body>
-        <h1>Hello World</h1>
+        <div class="blurb-container">
+            <div class="blurb-text">
+                <h1>Computer Science & Information Security Student at John Jay College</h1>
+                <h3>NYC | 3.6 GPA | Fall 2026 Graduation</h3>
+                <p>My experience in customer service and working with under-served communities makes me passionate about creating accessible, intuitive technology that reflects diverse user bases.</p>
+            </div>
+            <div class="blurb-img">
+                <img src="" alt=""/>
+            </div>
+        </div>
+
+        <div class="skills-section">
+            <div class="skill">
+                <h3>Object-Oriented Programming</h3>
+                <p>C++, Python</p>
+            </div>
+
+            <div class="skill">
+                <h3>Web Dev</h3>
+                <p>HTML/CSS, Javascript</p>
+            </div>
+
+            <div class="skill">
+                <h3>Cybersecurity</h3>
+                <p>Machine Learning, Wireshark, Catalyst, Python, IDS</p>
+            </div>
+
+            <!--
+            <div class="skill">
+                <h3>Machine Learning</h3>
+                <p>IDS, Pandas, Python, Scikitlearn</p>
+            </div>
+            -->
+        </div>
+        
     </body>
 </html>
+
+<style>
+    nav{
+        position: sticky;
+        display: grid;
+        grid-template-columns: auto auto;
+
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+
+        font-size: 18px;
+    }
+    ul{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    li{
+        text-align: center;
+        list-style: none;
+    }
+    li a{
+        color: antiquewhite;
+        text-decoration: none;
+    }
+    li a:hover{
+        color: lime;
+        transition: 0.3s;
+    }
+
+    body{
+        font-family:'Courier New', Courier, monospace;
+        margin: auto;
+        background-color: rgb(4, 4, 18);
+    }
+    p{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        line-height: 1.5;
+    }
+
+    .blurb-container{
+        display: grid;
+        grid-template-columns: 50% auto auto;
+        padding: 12rem;
+
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("nypl_photoITook.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .blurb-text{
+        padding: 24px;
+        color: antiquewhite;
+    }
+
+    .skills-section{
+        margin: 8rem;
+
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr)); /* Update first parameter based on number of skills */
+    }
+    .skill{
+        text-align: center;
+        color: antiquewhite;
+        margin: 1rem;
+        padding: 6px;
+
+        background-color: rgba(24, 24, 52, 0.9);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    }
+</style>
+
+<script>
+    alert("This site is a work in progress.");
+</script>
