@@ -90,6 +90,10 @@ p{
 
 
 /* PROJECTS.HTML */
+.sticky{
+    position: sticky;
+    top: 6rem;
+}
 .page-nav{
     position: sticky;
     top: 0;
@@ -108,7 +112,7 @@ p{
     line-height: 2;
 }
 .page-nav, li{
-    padding: 0.5rem 0 0.5rem 0;
+    padding: 2rem 0 0.5rem 0;
     list-style: none;
     text-align: left;
 }
