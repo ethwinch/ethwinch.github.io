@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Projects | Ethan Winch</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <nav>
+        <img src="" alt="logo"/>
+        <ul>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <body>
+        <div class="page-nav">
+            <ul>
+                <h2 style="color: lime;">Projects</h2>
+                <li><a href="#FamilyTreeProgram">Family Tree Program</a></li>
+                <li><a href="#IDS">Lightweight Ensemble Anomaly Detection for Hijacked IoT Devices</a></li>
+                <li><a href="#MatchaMajestyWebsite">Matcha Majesty Website</a></li>
+            </ul>
+        </div>
+
+        <div class="projects-container">
+            <div class="project" id="FamilyTreeProgram">
+                <h1>Family Tree Program</h1>
+                <p>As part of my Spring 2025 Mentorship with Out in Tech, I created a Family Tree program in C++. This program goes beyond what other programs allow you to do in terms of depicting a diverse range of relationships such as children of divorce, children of different parents, and polyamory.</p>
+                <p>The tree is visualized using the GraphViz library. The tree is generated as a dot file, which can be converted to an svg for easy use.</p>
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Polyamory</li>
+                    <li>Children of Divorce</li>
+                    <li>Children with different parents</li>
+                    <li>Dropdown options that represent diverse gender & sex presentations</li>
+                    <li>Visualizes tree using the Graphviz library</li>
+                    <li>Generates a dot/svg file of tree visualization</li>
+                </ul>
+                <img style="border-radius: 12px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);" src="FTProgramGraphExample1_Spiderman.png"/>
+                <p><a href="https://github.com/ethwinch/FamilyTreeOIT/tree/Graphviz-Visualization" target="_blank">➔ Github Repository for Project</a></p>
+            </div>
+
+            <div class="project" id="IDS">
+                <h1>Lightweight Ensemble Anomaly Detection for Hijacked IoT Devices</h1>
+                <p>The rapid growth of IoT devices has significantly increased the attack surface of modern networks, making them vulnerable to hijacking and malicious use. Traditional intrusion detection systems often struggle to detect subtle or zero-day anomalies due to their reliance on static signatures and high computational requirements.</p>
+                <p>This project proposes a Lightweight Ensemble Anomaly Detection Model designed specifically for IoT environments to efficiently identify hijacked devices in real time. By combining multiple machine learning classifiers, such as <b>Random Forest</b> and <b>Decision Tree</b>, in an ensemble structure, the model aims to improve detection accuracy while maintaining a low resource consumption suitable for IoT hardware. The system will be evaluated using publicly available IoT datasets and benchmarked against single-model baselines using metrics like <b>ROC-AUC, F1, precision, accuracy</b> and <b>CV scores</b>. This approach will seek to provide a more flexible and energy-efficient solution for mitigating IoT-based security threats.</p>
+                <img style="border-radius: 12px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3); background-color: antiquewhite; width: 100%;" src="DesignDiagram_CSCI412.png"/>
+                <p><a href="https://github.com/ethwinch/IDS-for-IoT-devices-using-ensemble-machine-learning" target="_blank">➔ Github Repository for Project</a></p>
+            </div>
+
+            <div class="project" id="MatchaMajestyWebsite">
+                <h1>Matcha Majesty Website</h1>
+                <p>What started as matcha reviews in my notes app so I could remember which places were good and which were terrible became a website where I post my matcha reviews for places across NYC and NJ.</p>
+                <p>This site is a constant WIP while I add features and review more matcha places.</p>
+                <p>Currently, I am working on giving visitors the ability to leave their own reviews under mine. I have already implemented this feature on localhost using MySQL & Apache, but am struggling to figure out how to make it live. Security has been at the forefront of my mind while developing this feature. By using prepared statements I can prevent XSS attacks and SQL injections.</p>
+                <h4>Other features I've implemented include...</h4>
+                <ul>
+                    <li>Leaflet Open Streets API to mark reviewed locations on a map.</li>
+                    <li>Storing review data in a JSON file to be loaded into HTML via javaScript.</li>
+                    <li>Light/Dark mode that utilizes local storage to remember user preferences across pages.</li>
+                    <li>Ability to filter reviews by star rating, price and flavor.</li>
+                </ul>
+                <p><a href="https://github.com/ethwinch/MatchaMajesty/tree/main" target="_blank">➔ Github Repository for Project</a></p>
+            </div>
+        </div>
+    </body>
+</html>
+
+<style>
+    body{
+        display: grid;
+        grid-template-columns: 25% 75%;
+    }
+</style>
