@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ethan Winch</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <nav>
+        <a href="index.html"><img src="" alt="logo"/></a>
+        <ul>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <body>
+        <div class="blurb-container">
+            <div class="blurb-text">
+                <h1><i>Experience</i></h1>
+            </div>
+            <div class="blurb-img">
+                <img src="" alt=""/>
+            </div>
+        </div>
+
+        <div class="body-text">
+            <div class="folder-slideshow">
+
+                <!-- FOLDER TABS -->
+                <a id="tab-1" class="folder-tab active-tab" href="#codepath-slide">CodePath</a>
+                <a id="tab-2" class="folder-tab" href="#wordpress-slide">WordPress</a>
+
+                <!-- FOLDER CONTENTS -->
+                <div class="folder-slides">
+                    <!--
+                    <div class="folder-tab">
+                        <h3>Code Path</h3>
+                    </div>
+                    -->
+                    <div id="codepath-slide" class="folder-contents">
+                        <div class="text-slideshow-container">
+                            <div class="text-slide" style="padding: 42px;">
+                                <p>On top of my college classes, I completed courses with CodePath, including their WEB101 and CYB102 classes.</p>
+                                <p>Each class culminated in a final project detailed below. These courses gave me the opportunity to sharpen my web dev and cybersecurity skills while collaborating with awesome people on assignments and sharing ideas.</p>
+                                <p>CodePath also offered career prep & talks, resume/GitHub/LinkedIn guidance, and new opportunities that have helped me significantly in my tech journey.</p>
+                            </div>
+                            <div class="text-slide">
+                                <h4>WEB 101 | September 2025 - November 2025</h4>
+                                <ul>
+                                    <li>Learned HTML/CSS fundamentals like the box model, flex & grid displays, and id, class & element selectors</li>
+                                    <li>Used javaScript to manipulate the DOM, implement form validation, & create a light/dark mode</li>
+                                    <li>Handeled form data and updated page content on form submission</li>
+                                    <li>Displayed a confirmation modal upon form submission</li>
+                                </ul>
+
+                                <h4>Final Project - Halloween RSVP Website</h4>
+                                <p><a href="https://forging-mint-sofa-634.vscodeedu.app" target="_blank">Click here to view the site!</a></p>
+                            </div>
+                            <div class="text-slide">
+                                <h4>CYB 102 | September 2025 - November 2025</h4>
+                                <ul>
+                                    <li>Performed threat intelligence by analyzing malicious network traffic with tools such as Splunk, Wireshark & Snort</li>
+                                    <li>Cataloged attacks in Catalyst and scanned malicious files, IPs and hashes in Virus Total</li>
+                                </ul>
+
+                                <h4>Final Project - Credit Card Fraud Anomoly Detection</h4>
+                                <p>[DETAIL FINAL PROJECT AND LINK]</p>
+                            </div>
+
+                            <a class="prev" onclick="plusSlides(-1)">❮</a>
+                            <a class="next" onclick="plusSlides(1)">❯</a>
+
+                            <div class="dot-container">
+                                <span class="dot" onclick="currentSlide(1)"></span> 
+                                <span class="dot" onclick="currentSlide(2)"></span> 
+                                <span class="dot" onclick="currentSlide(3)"></span> 
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="wordpress-slide" class="folder-contents">
+                        <p>Volunteered with Automattic to create websites for grassroots organizations fighting for LGBTQ rights around the world.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
+
+<style>
+    .folder-slides > h3, h4, p, li{
+        color: var(--background);
+    }
+</style>
+
+
+<!-- ACTIVE TAB FEATURE ON FOLDER TABS -->
+<script>
+    document.addEventListener('click', function handleClick(event) {
+        if(!event.target.classList.contains('folder-tab')){
+            return;
+        }
+
+        // Remove Active Tab
+        const tabs = document.querySelectorAll('.folder-tab');
+        tabs.forEach(tab => tab.classList.remove('active-tab'));
+
+        // Add Active Tab on Clicked Element
+        event.target.classList.add('active-tab');
+    });
+</script>
+<style>
+    .active-tab{
+        background-color: wheat;
+    }
+</style>
+
+
+<!-- TEXT SLIDESHOW -->
+<!-- copied from W3 schools -->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("text-slide");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<!-- TEXT SLIDESHOW CSS -->
+<style>
+/* Next & Prev Buttons */
+.prev, .next {
+  cursor: pointer;
+
+  float: left;
+  padding: 16px;
+
+  color: #3f3d45;
+  font-weight: bold;
+  font-size: 20px;
+
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  float: right;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    transition: 0.5s;
+    color: #3f3d45;
+}
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+
+  background: #928caa;
+}
+.active, .dot:hover {
+  background-color: #3f3d45;
+}
+</style>
