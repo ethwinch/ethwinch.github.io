@@ -11,9 +11,28 @@ html{
 a{
     color: lime;
     text-decoration: none;
+    font-size: 20px;
 }
 h1, h2, h3, h4, h5, h6, p, li{
     color: antiquewhite;
+}
+h1{
+    font-size: 42px;
+}
+h2{
+    font-size: 36px;
+}
+h3{
+    font-size: 28px;
+}
+h4{
+    font-size: 24px;
+}
+p{
+    font-size: 18px;
+}
+li{
+    font-size: 18px;
 }
 
 
@@ -46,7 +65,7 @@ li a:hover{
 }
 
 body{
-    font-family:'Courier New', Courier, monospace;
+    font-family: monospace;
     margin: auto;
     background-color: var(--background);
 }
@@ -66,9 +85,10 @@ p{
     background-size: cover;
     position: relative;
 }
+/*
 .blurb-text{
     padding: 24px;
-}
+}*/
 
 .skills-section{
     margin: 8rem;
@@ -112,7 +132,7 @@ p{
     line-height: 2;
 }
 .page-nav, li{
-    padding: 0.5rem 0 0.5rem 0;
+    padding: 0.5rem 0.5rem 0.5rem 0;
     list-style: none;
     text-align: left;
 }
@@ -134,8 +154,67 @@ p{
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
-.project ul li{
+.project, .text-slide ul li{
     line-height: 2;
     list-style: square;
     /*list-style: decimal-leading-zero;*/
+}
+
+
+/* EXPERIENCE */
+.body-text{
+    margin: 1rem 8rem 1rem 8rem;
+    padding: 24px;
+}
+
+
+.folder-slideshow{
+    width: 100%;
+    overflow: hidden;
+}
+.folder-slides{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    /*scroll-behavior: smooth;*/
+    -webkit-overflow-scrolling: touch;
+}
+.folder-slides > div{
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  
+    justify-content: center;
+    align-items: center;
+
+
+    margin-right: 2.5rem;
+    width: 94%;
+
+    padding: 2rem 1.5rem 1rem 1.5rem;
+    border-radius: 0 8px 8px 8px;
+    background-color: wheat;
+    /*margin-bottom: 2.5rem;*/
+}
+.text-slideshow-container{
+    padding: 24px;
+    text-align: center;
+}
+
+/* Snap content even without button/folder tab nav */
+@supports (scroll-snap-type) {
+  .folder-slideshow > a {
+    display: none;
+  }
+}
+
+
+.folder-tab{
+    padding: 1rem 1.5rem 0.5rem 1.5rem;
+    border-radius: 8px 8px 0 0;
+
+    display: inline-block;
+    clear: both;
+
+    background-color: #b7a686;
+    color: black;
 }
