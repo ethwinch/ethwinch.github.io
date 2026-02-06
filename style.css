@@ -91,7 +91,7 @@ p{
 }*/
 
 .skills-section{
-    margin: 8rem;
+    margin: 0 8rem 0 8rem;
 
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr)); /* Update first parameter based on number of skills */
@@ -120,7 +120,8 @@ p{
 
     margin: 8rem 1rem 1rem 1rem;
 
-    background-color: var(--midground);
+    /* background-color: var(--midground); */
+    background-color: #1F162FD6;
 
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
@@ -150,7 +151,8 @@ p{
     margin-right: 1rem;
 
     
-    background-color: var(--midground);
+    /* background-color: var(--midground); */
+    background-color: #1F162FD6;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
@@ -165,6 +167,15 @@ p{
 .body-text{
     margin: 1rem 8rem 1rem 8rem;
     padding: 24px;
+}
+.img-center{
+    margin-top: 3rem; 
+    margin-bottom: 3rem;
+
+    margin-left: auto; 
+    margin-right: auto; 
+
+    display: block;
 }
 
 
@@ -217,4 +228,13 @@ p{
 
     background-color: #b7a686;
     color: black;
+}
+
+
+.footer{
+    background-color: #1F162FD6;
+    z-index: 1;
+    padding: 12px;
+    width: 100%;
+    text-align: center;
 }

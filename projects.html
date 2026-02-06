@@ -18,11 +18,11 @@
         </ul>
     </nav>
 
-    <body>
+    <div class="grid-body">
         <div class="page-nav">
             <div class="sticky">
             <ul style="padding-top: 2rem;">
-                <h2 style="color: lime;">Projects</h2>
+                <h2 style="color: #b174e5;">Projects</h2>
                 <li><a href="#FamilyTreeProgram">🡺 Family Tree Program</a></li>
                 <li><a href="#IDS">🡺 Lightweight Ensemble Anomaly Detection for Hijacked IoT Devices</a></li>
                 <li><a href="#MatchaMajestyWebsite">🡺 Matcha Majesty Website</a></li>
@@ -71,12 +71,26 @@
                 <p><a href="https://github.com/ethwinch/MatchaMajesty/tree/main" target="_blank">➔ Github Repository for Project</a></p>
             </div>
         </div>
-    </body>
+    </div>
+
+    <div class="footer">
+        <p><i>Background photo from <a href="https://images.nasa.gov/details/PIA17241" target="_blank">NASA Image Library</a></i></p>
+    </div>
+
 </html>
 
 <style>
-    body{
+    .grid-body{
         display: grid;
         grid-template-columns: 25% 75%;
+        /* background-image: url("https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000394/GSFC_20171208_Archive_e000394~small.jpg"); */
+    
+        box-shadow: inset 0 0 0 1000px rgba(16, 16, 16, 0.4);
+        background-image: url("https://images-assets.nasa.gov/image/PIA17241/PIA17241~medium.jpg");
+        /* img from NASA -> https://images.nasa.gov/details/PIA17241 */
+
+        padding-bottom: 6rem;
     }
 </style>
+
+<!-- Make project info just previews. For fulld details, Read More btn to new page -->
